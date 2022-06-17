@@ -13,5 +13,11 @@ describe 'Tennis Scoreboard' do
     it 'Displays "Player 1 wins" if Player 1 passes 40 points & Player 2 has 30 points or fewer' do
         expect(scoreboard("A",30)).to eq("Player 1 wins")
     end
+    it 'Displays "Player 2 wins" if Player 2 passes 40 points & Player 1 has 30 points or fewer' do
+        expect(scoreboard(30,"A")).to eq("Player 2 wins")
+    end
+    it 'Displays "Player 1 wins" if Player one\'s score is "Game"' do
+        expect(scoreboard("Game", 40)).to eq("Player 1 wins")
+    end
 end
 
